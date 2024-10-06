@@ -1,0 +1,24 @@
+# Ensure consistent line endings
+* text=auto
+
+# Handle binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.webp binary
+
+# Node.js dependencies
+node_modules/* binary
+
+# Prisma schema and migrations
+*.prisma text
+prisma/migrations/* text
+
+# Next.js build output
+.next/* binary
+
+# Environment variables
+.env text
