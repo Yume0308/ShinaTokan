@@ -1,7 +1,12 @@
 {
-  "name": "myapp",
+  "name": "ShinaTokan",
   "version": "0.1.0",
   "private": true,
+  "description": "ShinaTokan - an open source for library management",
+  "homepage": "https://github.com/Yume0308/ShinaTokan",
+  "author": "Phạm Anh Tuấn <23020704@vnu.edu.vn>",
+  "sideEffects": false,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -27,5 +32,15 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yume0308/ShinaTokan.git",
+    "directory": "ShinaTokan"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
+    "access": "public",
+    "tag": "latest"
   }
 }
