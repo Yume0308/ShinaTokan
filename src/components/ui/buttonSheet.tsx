@@ -21,8 +21,9 @@ import {
 
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
-import { NavListItemData } from "../data/navListItemData"
+import { itemsTooltip } from "../data/navListItemData"
 import PropTypes from 'prop-types'
+import Image from "next/image"
 
 const ButtonSheet = (props: any) => {
   return (
@@ -41,11 +42,11 @@ const ButtonSheet = (props: any) => {
         <nav className="grid gap-1 text-lg font-normal">
           <Link
             href="#"
-            className="flex items-center gap-1 text-lg font-semibold"
+            className="mx-[-0.3rem] flex items-center gap-1 text-lg font-semibold"
           >
-            {/* <Image src={props.logo.imgSrc} alt={props.logo.imgAlt} width={props.logo.size} height={props.logo.size} /> */}
+            <Image src={props.logo.imgSrc} alt={props.logo.imgAlt} width={props.logo.size} height={props.logo.size} />
           </Link>
-          {NavListItemData.map((item) => {
+          {itemsTooltip.Home.map((item) => {
             return (
               <Link
                 key = {item.id}
@@ -57,6 +58,19 @@ const ButtonSheet = (props: any) => {
             )
           })}
         </nav>
+        <nav className="mt-auto grid gap-1 text-lg font-normal">
+          {itemsTooltip.Out.map((item) => {
+              return (
+                <Link
+                  key = {item.id}
+                  href = {item.href}
+                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
+                >
+                  <item.attribute className="h-5 w-5" />{item.title}
+                </Link>
+              )
+            })}
+        </nav>
       </SheetContent>
     </Sheet>
   )
@@ -67,7 +81,7 @@ ButtonSheet.defaultProps = {
   logo: {
     imgSrc: "/logo.png",
     imgAlt: "ShinaTokan",
-    size: 30,
+    size: 35,
   }
 }
 

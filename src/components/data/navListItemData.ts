@@ -96,5 +96,19 @@ const NavListItemData: NavListItemInterface[] =
   }
 ]
 
+const itemsTooltip: {Home: NavListItemInterface[], Out: NavListItemInterface[] } = {
+  Home: [],
+  Out: []
+}
+NavListItemData.forEach((item) => {
+  if(item.tooltip === 'Home') {
+    itemsTooltip.Home.push(item)
+  }
+  else itemsTooltip.Out.push(item)
+})
+
+
+
 export {NavListItemData};
 export type {NavListItemInterface};
+export {itemsTooltip};

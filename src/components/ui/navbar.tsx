@@ -1,19 +1,7 @@
 import Link from "next/link";
-import { NavListItemData, NavListItemInterface } from "../data/navListItemData";
-import { Card } from "./card";
+import { itemsTooltip } from "../data/navListItemData";
 
 const Navbar = () => {
-  const itemsTooltip: {Home: NavListItemInterface[], Out: NavListItemInterface[] } = {
-    Home: [],
-    Out: []
-  }
-  NavListItemData.forEach((item) => {
-    if(item.tooltip === 'Home') {
-      itemsTooltip.Home.push(item)
-    }
-    else itemsTooltip.Out.push(item)
-  })
-
   return (
     <>
       <aside className="flex-1" >
