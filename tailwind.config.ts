@@ -49,7 +49,9 @@ const config: Config = {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+        userCardEven: '#EDF9FD',
+        userCardOdd: '#FAE198',
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
