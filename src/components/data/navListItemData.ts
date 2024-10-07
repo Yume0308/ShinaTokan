@@ -107,8 +107,4 @@ NavListItemData.forEach((item) => {
   else itemsTooltip.Out.push(item)
 })
 
-
-
-export {NavListItemData};
-export type {NavListItemInterface};
 export {itemsTooltip};
