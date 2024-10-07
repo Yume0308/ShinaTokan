@@ -71,7 +71,7 @@ export default function DashboardLayout({
       <div className="flex flex-col">
         {/* header */}
         <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
-
+          {/* button sheet  */}
           <ButtonSheet side="left" logo={
             {
               imgSrc: "/logo.png",
@@ -81,27 +81,13 @@ export default function DashboardLayout({
           } />
           <ButtonSearch />
 
+          {/* avatar header */}
           <AvatarHeader avatarImgSrc="https://github.com/shadcn.png" avatarImgAlt="" avatarFallback="SC" nickname="Shadcn" email="Shadcn@gmail.com"/>
         </header>
 
         {/* main */}
-        <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">
-          <div className="flex items-center">
-            <h1 className="text-lg font-semibold md:text-2xl">Books</h1>
-          </div>
-          <div
-            className="flex flex-1 items-center justify-center rounded-lg border border-dashed shadow-sm" x-chunk="dashboard-02-chunk-1"
-          >
-            <div className="flex flex-col items-center gap-1 text-center">
-              <h3 className="text-2xl font-bold tracking-tight">
-                You have no products
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                You can start selling as soon as you add a book.
-              </p>
-              <Button className="mt-4">Add Book</Button>
-            </div>
-          </div>
+        <main>
+          {children}
         </main>
       </div>
     </div>
